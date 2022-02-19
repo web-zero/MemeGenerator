@@ -1,6 +1,6 @@
-var after='';
+var after=''
 
-function fetchmemes(){
+function fetchMemes(){
 	color()
 	
 	if(document.getElementById('memes')){
