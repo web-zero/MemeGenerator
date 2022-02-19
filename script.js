@@ -9,10 +9,12 @@ function fetchmemes(){
 	
 	let parentdiv=document.createELement('div');
 	parentdiv.id='memes'
-	fetch(' https://www.reddit.com/r/memes.json?after=${after}').then(response=>response.json()).then(body=>{
+	fetch('https://www.reddit.com/r/memes.json?after=${after}')
+		.then(response=>response.json())
+		.then(body=>{
 		after=body.data.after
-		for(let index=0;index<body.data.children;index++){
-			if(body.data,children[index].data.post_hint=='iaage'){
+		for(let index=0;index<body.data.children.length;index++){
+			if(body.data.children[index].data.post_hint=='image'){
 				let div=document.createELement('div');
 				let h4=document.createELement('h4');
 				let image=document.createELement('img');
