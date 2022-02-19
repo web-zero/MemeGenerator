@@ -9,7 +9,7 @@ function fetchMemes(){
 	
 	let parentdiv=document.createELement('div')
 	parentdiv.id='memes'
-	fetch(`https://www.reddit.com/r/memes.json?after=${after}`)
+	fetch('https://www.reddit.com/r/memes.json?after=${after}')
 		.then(response=>response.json())
 		.then(body=>{
 		after=body.data.after
