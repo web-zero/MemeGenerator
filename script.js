@@ -14,7 +14,7 @@ function fetchMemes(){
 		.then(body=>{
 		after=body.data.after
 		for(let index=0;index<body.data.children.length;index++){
-			if(body.data.children[index].data.post_hint=='image'){
+			if(body.data.children[index].data.post_hint==='image'){
 				let div=document.createELement('div')
 				let h4=document.createELement('h4')
 				let image=document.createELement('img')
